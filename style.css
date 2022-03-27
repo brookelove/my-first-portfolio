@@ -10,16 +10,29 @@
     --font:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body {
-    background-color: pink;
+    background-color: aliceblue;
 }
 header {
     background-color: skyblue;
     font-weight: bold;
+    display: block;
 }
 /* main title of the page */
 header h1 {
     font-size: 50px;
-    font-weight: bold;
+    text-indent: 80px;
+    font-weight: bolder;
+    color: black;
+    background-image: linear-gradient(
+        rgba(231, 22, 238, 0.3) 0%,
+        rgba(138, 57, 141, 0.3) 100%
+    );
+    display: flex;
+    align-items: center;
+/* stop the header h1 from going all the way across while give the header padding */
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: -30px;
 }
 /* make the navigation bar inside of the header*/
 header ul {
@@ -69,7 +82,8 @@ figure h1 {
 }
 section p {
     font-family: var(--font);
-    font-size: 12px;
+    font-size: 13px;
+    text-indent: 100px;
 }
 /* put the boxes in the center of the page as well as wrap them correctly around */
 .box {
@@ -80,15 +94,30 @@ section p {
     margin-left: -1.5rem;
     justify-content: center;
 }
+/* correctly set the image of the text boxes */
+figcaption img {
+    height:200px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
 /* to make borders around the text boxes */
 .figcaption {
     margin-bottom: 20px;
     padding: 50px;
     height: 200px;
-    background-color: beige;
+}
+.work-box {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: aqua;
 }
 /* make the text boxes for the card headers/ subheaders */
 .text-box {
+    position: relative;
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -107,17 +136,26 @@ figcaption p {
 }
 /* how to make the aside go to the left of the page */
 aside {
-    display: block;
-    margin-left: 20px;
+    display: inline;
+    margin-left: 0px;
     padding: 20px;
+    clear: both;
     float: left;
     width: 20%;
     height: 100%;
     background-color: beige;
 }
+aside h1 {
+    border-right: 6px solid plum;
+    height: 100px;
+}
 .side-bar {
-    margin-bottom: 32px;
-    font-size: 30px;
+    margin-bottom: 32px auto;
+    text-align: center;
+}
+.side-bar h1 {
+    margin-bottom: 10px;
+    text-align: center;
 }
 footer {
     background-color: aliceblue;
