@@ -1,3 +1,4 @@
+/* sets the margin of the whole page to 0 so everything is full */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -15,16 +16,19 @@ header {
     background-color: skyblue;
     font-weight: bold;
 }
+/* main title of the page */
 title {
     font-size: 30px;
     font-weight: bold;
 }
+/* make the navigation bar links inside of the header*/
 header ul {
     list-style-type: none;
     margin: 0;
     padding: 0%;
     overflow: hidden;
 }
+/* move navigation links to the right */
 header li {
     display: inline;
     float: right;
@@ -42,6 +46,7 @@ main {
     background-color: var(--text);
     color: blue;
 }
+/* puts the text inside of the image */
 .container {
     position: relative;
     text-align: center;
@@ -60,4 +65,15 @@ figure h1 {
 section p {
     font-family: var(--font);
     font-size: 12px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
+}
+.justify-center {
+    justify-content: center;
 }
