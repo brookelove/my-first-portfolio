@@ -17,11 +17,11 @@ header {
     font-weight: bold;
 }
 /* main title of the page */
-title {
-    font-size: 30px;
+header h1 {
+    font-size: 50px;
     font-weight: bold;
 }
-/* make the navigation bar links inside of the header*/
+/* make the navigation bar inside of the header*/
 header ul {
     list-style-type: none;
     margin: 0;
@@ -51,13 +51,18 @@ main {
     position: relative;
     text-align: center;
 }
+
 img {
+    height:200px;
+    width: 100%;
     margin: 0;
     padding: 0;
-    width: 1950px;
-    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
 }
 figure h1 {
+    background-color: skyblue;
+    outline: 5px solid skyblue;
     position: absolute;
     bottom: 8px;
     right: 16px;
@@ -66,14 +71,75 @@ section p {
     font-family: var(--font);
     font-size: 12px;
 }
-
+/* put the boxes in the center of the page as well as wrap them correctly around */
 .box {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     flex-direction: row;
     margin-right: -1.5rem;
     margin-left: -1.5rem;
-}
-.justify-center {
     justify-content: center;
+}
+/* to make borders around the text boxes */
+.figcaption {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 200px;
+    background-color: beige;
+}
+/* make the text boxes for the card headers/ subheaders */
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    color: blue;
+    background-color: skyblue;
+    outline: 7px solid skyblue;
+    transition: all 0.5s ease-in-out;
+
+}
+.card-header {
+    font-size: 30px;
+}
+figcaption p {
+    font-size: 10px;
+}
+/* how to make the aside go to the left of the page */
+aside {
+    display: block;
+    margin-left: 20px;
+    padding: 20px;
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: beige;
+}
+.side-bar {
+    margin-bottom: 32px;
+    font-size: 30px;
+}
+footer {
+    background-color: aliceblue;
+}
+/* make the navigation bar inside of the header*/
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0%;
+    overflow: hidden;
+}
+/* move navigation links to the right */
+footer li {
+    display: inline;
+    float: right;
+}
+footer li a {
+    display: block;
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px; 
+    text-decoration: underline;
 }
