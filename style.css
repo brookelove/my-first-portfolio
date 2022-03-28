@@ -144,7 +144,7 @@ section h5 p {
 
 }
 /* how to make the aside go to the left of the page */
-aside {
+/* aside {
     margin-left: 0px;
     padding: 20px;
     clear: both;
@@ -167,15 +167,25 @@ aside h1 {
 .side-bar h1 {
     margin-bottom: 10px;
     text-align: center;
+} */
+.aboutcontainer {
+    display: flex;
 }
+.aboutcontainer h1 {
+    padding: 10px;
+    width: 25%;
+}
+
 footer {
     background-color: aliceblue;
     color: var(--text);
 }
 .navbar {
     overflow: hidden;
+    float: left;
     bottom: 0;
     width: 100%
+
 }
 /* make the navigation bar inside of the header*/
 footer ul {
