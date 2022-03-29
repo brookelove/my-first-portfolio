@@ -17,30 +17,22 @@ body {
 header {
     background-color: #8D7458;
     font-weight: bold;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 /* main title of the page */
 header h1 {
     font-size: 50px;
-    text-indent: 80px;
-    font-weight: bolder;
     color:var(--text);
-    background-image: linear-gradient(
-        rgba(141, 116, 88, 0.9) 0%,
-        rgba(141, 116, 88, 0.9) 100%
-    );
-    display: flex;
     align-items: center;
 /* stop the header h1 from going all the way across while give the header padding */
     display: inline-block;
     padding-right: 10px;
-    padding-left: -30px;
 }
 /* make the navigation bar inside of the header*/
 header ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0%;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -49,14 +41,14 @@ header li {
     display: inline;
     float: right;
 }
-header li a {
+header a {
     display: block;
     color:var(--text);
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     padding: 10px; 
-    text-decoration: underline;
+    text-decoration: none;
 }
 main a {
     color: var(--text);
@@ -69,8 +61,8 @@ main a {
 main img {
     height:200px;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     display: flex;
     flex-wrap: wrap-reverse;
 }
@@ -85,7 +77,9 @@ figure h1 {
 section p {
     font-family: var(--font);
     font-size: 13px;
-    text-indent: 150px;
+}
+.row {
+    display:  50% flex;
 }
 /* put the boxes in the center of the page as well as wrap them correctly around */
 .box {
@@ -97,7 +91,7 @@ section p {
     justify-content: center;
 }
 /* correctly set the image of the text boxes */
-figcaption img {
+figure img {
     height:200px;
     width: 100%;
     margin: 0;
@@ -110,17 +104,14 @@ figcaption img {
     margin-bottom: 20px;
     padding: 50px;
     height: 200px;
-}
-.surf {
-    max-width: 800px;
-    max-height: 100%;
+    float: right;
 }
 .work-box {
     margin-bottom: 20px;
     padding: 10px;
     background-color: var(--text-box);
     position: relative;
-    text-align: center;
+    text-align: end;
 }
 .work-box:hover {
     box-shadow: inset 0px 0px 8px whitesmoke, 0 0 15px whitesmoke;
@@ -135,7 +126,7 @@ figcaption img {
 
 }
 .card-header {
-    font-size: 20px;
+    font-size: 25px;
 }
 section h5 p {
     font-size: 10px;
@@ -143,31 +134,6 @@ section h5 p {
     text-align: left;
 
 }
-/* how to make the aside go to the left of the page */
-/* aside {
-    margin-left: 0px;
-    padding: 20px;
-    clear: both;
-    float: left;
-    width: 20%;
-    height: 100%;
-    background-color: var(--pastel);
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
-aside h1 {
-    border-right: 6px solid;
-    height: 100px;
-}
-.side-bar {
-    margin-bottom: 32px auto;
-    text-align: center;
-}
-.side-bar h1 {
-    margin-bottom: 10px;
-    text-align: center;
-} */
 .aboutcontainer {
     display: flex;
 }
@@ -175,37 +141,35 @@ aside h1 {
     padding: 10px;
     width: 25%;
 }
-
 footer {
-    background-color: aliceblue;
-    color: var(--text);
+    background-color: darkgrey;
 }
-.navbar {
-    overflow: hidden;
-    float: left;
-    bottom: 0;
-    width: 100%
-
-}
-/* make the navigation bar inside of the header*/
 footer ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0%;
+    text-align: end;
     overflow: hidden;
-    margin-bottom: 50px;
 }
-/* move navigation links to the right */
+footer img {
+    max-width: 25%;
+}
+
 footer li {
     display: inline;
-    float: right;
 }
-footer li a {
-    display: block;
-    color:var(--text);
+footer a {
+    text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    text-align: center;
-    padding: 10px; 
-    text-decoration: underline;
+    padding: 10px;
+    font-style: var(--text);
+}
+@media screen  and (max-width: 768px) {
+    .figcation {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .figcaption {
+        width: 100%;
+    }
 }
